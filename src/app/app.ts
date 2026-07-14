@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
-//!import { RouterOutlet } from '@angular/router';//Remove o uso do RouterOutlet por enquanto! Não está em uso.
-import { Produto } from './components/produto/produto'; //Importa o components do produto para ser exibido no app criado
+import { RouterOutlet } from '@angular/router'
+import { Produto } from './components/produto/produto'; 
+import {ListaProdutos} from './components/lista-produtos/lista-produtos'; 
 @Component({
   selector: 'app-root',
-  imports: [Produto],
+  imports: [ListaProdutos],
+  standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('e-commerce');
 }
+//criação da lista de produtos e o import da mesma
