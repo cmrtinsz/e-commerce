@@ -1,15 +1,7 @@
-<!--Cria uma div para mostrar as informações do produto -->
-<!--<div>
-    <h3>Produto: {{ produto }} </h3>
-    <p>Preço: R$ {{ preco }} </p>
-</div> -->
+<div class="produto"> 
 
-<div>
-    <P>Lojinha da Lua</P>
-    @for (item of produto; track item){
-        <div>
-        <h3>{{ item.produto | uppercase }}</h3>
-        <P>{{ item.preco |precoFormatado }}</P>
-        </div>
-    }
+    <h3>{{ nome| uppercase}}</h3>
+    <P>{{ preco| precoFormatado}}</P>
+
 </div>
+
